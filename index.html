@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mi Portafolio</title>
+  <link rel="stylesheet" href="/public/css/style.css">  <!-- Corregido: "css" en lugar de "cs" -->
+</head>
+<body>
+  <header>
+    <h1>Mi Portafolio</h1>
+  </header>
+  <section id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un estudiante universitario apasionado por la 
+programación, con gran dedicación y gusto por el trabajo en 
+equipo. Me motiva aprender continuamente y aportar 
+soluciones creativas en cada proyecto..</p>
+  </section>
+  <section id="projects">
+    <h2>Proyectos</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <a href="https://augustozan.github.io/restaurante-virtual/" target="_blank">
+          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
+        </a>
+        <h3>Restaurante Virtual (Web)</h3>
+      </div>
+      <div class="project">
+        <div onclick="openModal()">  <!-- Div clickable para el modal -->
+          <img src="https://github.com/AugustoZan/restaurante-virtual/blob/main/assets/logo.jpg?raw=true" alt="Restaurante Virtual">
+        </div>
+        <h3>Restaurante Virtual (Móvil)</h3>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>Contacto: augustozanetta46@gmail.com</p>
+  </footer>
+
+<!-- Modal para las capturas -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>  <!-- Botón de cerrar -->
+    <h2>Capturas de Pantalla - Restaurante Virtual (Móvil)</h2>
+    <div class="gallery">
+      <img src="/public/assets/images/restauranteapp/captura1.jpg" alt="Captura 1">
+      <img src="/public/assets/images/restauranteapp/captura2.jpg" alt="Captura 2">
+      <img src="/public/assets/images/restauranteapp/captura3.jpg" alt="Captura 3">
+      <img src="/public/assets/images/restauranteapp/captura4.jpg" alt="Captura 4">
+      <img src="/public/assets/images/restauranteapp/captura5.jpg" alt="Captura 5">
+    </div>
+    <!-- Botones del modal -->
+    <div class="modal-buttons">
+      <a href="https://github.com/AugustoZan/restaurante-virtual-movil" target="_blank" class="modal-button repo-button">Ir al repositorio</a>
+      <button class="modal-button cancel-button" onclick="closeModal()">Cancelar</button>
+    </div>
+  </div>
+</div>
+
+  <script src="/public/js/script.js"></script>  <!-- Ruta absoluta -->
+</body>
+</html>

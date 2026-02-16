@@ -206,3 +206,31 @@ footer {
   }
 }
 
+/* Estilos para los iconos del footer */
+.footer-icons {
+  display: flex; /* Flexbox para alinear horizontalmente */
+  justify-content: center; /* Centra los iconos */
+  align-items: center; /* Alinea verticalmente */
+  gap: 15px; /* Espacio entre iconos */
+}
+
+.footer-icons a {
+  text-decoration: none; /* Quita subrayado */
+  transition: transform 0.3s; /* Animación suave al hover */
+}
+
+.footer-icons a:hover {
+  transform: scale(1.1); /* Agranda un poco al pasar el mouse */
+}
+
+.footer-icons img {
+  width: 30px; /* Tamaño fijo para consistencia */
+  height: auto; /* Mantiene proporción */
+  filter: brightness(0) invert(1); /* Hace los iconos blancos (si son oscuros; ajusta si no) */
+}
+
+/* Para el emoji de correo, si lo usas */
+.footer-icons span {
+  font-size: 24px; /* Tamaño similar a las imágenes */
+  color: #fff; /* Blanco */
+}

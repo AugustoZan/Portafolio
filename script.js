@@ -119,4 +119,4 @@ window.onclick = function (event) {
       closeModal(id);
     }
   });
-};
+}

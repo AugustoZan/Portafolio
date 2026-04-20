@@ -173,6 +173,16 @@ footer {
 .openapp-button:hover {
   background-color: #00ff00; /* Rojo */
 }
+
+/* Estilos específicos para el botón de abrir la app */
+.openapp-button {
+  background-color: #00cc00; /* Rojo más oscuro al pasar el mouse */
+  color: #fff; /* Texto blanco */
+}
+
+.openapp-button:hover {
+  background-color: #00ff00; /* Rojo */
+}
 /* El resto de tus estilos para .close, .gallery, etc., se mantienen igual */
 
 .close {

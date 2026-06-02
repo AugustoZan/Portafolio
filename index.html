@@ -24,6 +24,15 @@
     <section id="projects">
       <h2>Proyectos</h2>
       <div class="projects-grid">
+                <div class="project">
+          <div onclick="openModal('resolva')">
+            <img
+              src="https://github.com/No-Country-simulation/S04-26-Equipo-10-Web-App-Development/blob/develop/frontend/public/assets/icon.png?raw=true"
+              alt="Resolva"
+            />
+          </div>
+          <h3>Resolva</h3>
+        </div>
         <div class="project">
           <div onclick="openModal('conversa')">
             <img
@@ -282,6 +291,69 @@
           <button
             class="modal-button cancel-button"
             onclick="closeModal('conversa')"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Modal: Resolva -->
+    <div id="modal-resolva" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('resolva')">&times;</span>
+        <h2>Resolva</h2>
+        <p class="modal-description">
+          CRM inteligente para startups con integración a WhatsApp y email.
+          Permite gestionar leads y clientes, centralizar conversaciones,
+          automatizar seguimientos y visualizar métricas clave. Diseñado para
+          trabajo colaborativo, simple y asincrónico.
+        </p>
+
+        <div class="main-viewer" style="min-height: 400px">
+          <div
+            id="view-resolva"
+            class="media-container"
+            style="width: 100%; height: 400px"
+          >
+            <img
+              id="resolva-img"
+              src=""
+              alt="Vista Principal Resolva"
+              style="display: none; width: 100%; height: 100%; object-fit: cover;"
+            />
+            <iframe
+              id="resolva-video"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen
+              style="display: block; width: 100%; height: 100%"
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="tech-slider">
+          <div class="tech-track">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg" alt="JWT" />
+          </div>
+        </div>
+
+        <div class="modal-buttons">
+          <a
+            href="https://github.com/No-Country-simulation/S03-26-Equipo-19-Web-App-Development/tree/frontend"
+            target="_blank"
+            class="modal-button repo-button"
+            >Repositorio</a
+          >
+          <button
+            class="modal-button cancel-button"
+            onclick="closeModal('resolva')"
           >
             Cerrar
           </button>

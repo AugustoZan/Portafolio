@@ -22,10 +22,9 @@ function resetToImage(modalId) {
       updateView('view-turnapp', firstThumb.src);
     }
   }
-  // Conversa ya no usa imágenes, por eso no se incluye aquí
 }
 
-// Video para GMod
+// Video para GMod (bien)
 function showGModVideo() {
   const container = document.getElementById('view-gmodmods');
   if (!container) return;
@@ -41,7 +40,7 @@ function showGModVideo() {
   }
 }
 
-// Video para Conversa (nuevo)
+// Video para Conversa (bien)
 function showConversaVideo() {
   const container = document.getElementById('view-conversa');
   if (!container) return;
@@ -52,8 +51,23 @@ function showConversaVideo() {
     iframe.src = '';
     iframe.style.display = 'block';
     requestAnimationFrame(() => {
-      // URL del video que proporcionaste: https://youtu.be/n-ti7fYFBv8
       iframe.src = 'https://www.youtube.com/embed/n-ti7fYFBv8?autoplay=1&rel=0&mute=1';
+    });
+  }
+}
+
+// Video para Resolva (CORREGIDO)
+function showResolvaVideo() {
+  const container = document.getElementById('view-resolva');
+  if (!container) return;
+  const img = container.querySelector('img');
+  const iframe = container.querySelector('iframe');
+  if (img) img.style.display = 'none';
+  if (iframe) {
+    iframe.src = '';
+    iframe.style.display = 'block';
+    requestAnimationFrame(() => {
+      iframe.src = 'https://www.youtube.com/embed/gKfordKYfgg?autoplay=1&rel=0&mute=1';
     });
   }
 }
@@ -86,6 +100,8 @@ function openModal(id) {
     setTimeout(showGModVideo, 100);
   } else if (id === 'conversa') {
     setTimeout(showConversaVideo, 100);
+  } else if (id === 'resolva') {
+    setTimeout(showResolvaVideo, 100);
   } else if (id === 'turnapp') {
     resetToImage(id);
   }
@@ -93,12 +109,15 @@ function openModal(id) {
 
 // ===================== CERRAR MODAL =====================
 function closeModal(id) {
-  // Detener video si es GMod o Conversa
+  // Detener video
   if (id === 'gmod-mods') {
     const iframe = document.querySelector('#view-gmodmods iframe');
     if (iframe) iframe.src = '';
   } else if (id === 'conversa') {
     const iframe = document.querySelector('#view-conversa iframe');
+    if (iframe) iframe.src = '';
+  } else if (id === 'resolva') {
+    const iframe = document.querySelector('#view-resolva iframe');
     if (iframe) iframe.src = '';
   }
 

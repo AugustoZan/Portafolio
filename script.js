@@ -72,6 +72,23 @@ function showResolvaVideo() {
   }
 }
 
+// Video para ImpactHire
+function showImpactHireVideo() {
+  const container = document.getElementById('view-impacthire');
+  if (!container) return;
+  const img = container.querySelector('img');
+  const iframe = container.querySelector('iframe');
+  if (img) img.style.display = 'none';
+  if (iframe) {
+    iframe.src = '';
+    iframe.style.display = 'block';
+    requestAnimationFrame(() => {
+      iframe.src =
+  'https://www.youtube.com/embed/WgzpMIdTX38?autoplay=1&rel=0&mute=1';
+    });
+  }
+}
+
 // ===================== ABRIR MODAL =====================
 function openModal(id) {
   stopAllVideos();
@@ -102,6 +119,8 @@ function openModal(id) {
     setTimeout(showConversaVideo, 100);
   } else if (id === 'resolva') {
     setTimeout(showResolvaVideo, 100);
+  } else if (id === 'impacthire') {
+    setTimeout(showImpactHireVideo, 100);
   } else if (id === 'turnapp') {
     resetToImage(id);
   }
@@ -118,6 +137,9 @@ function closeModal(id) {
     if (iframe) iframe.src = '';
   } else if (id === 'resolva') {
     const iframe = document.querySelector('#view-resolva iframe');
+    if (iframe) iframe.src = '';
+  } else if (id === 'impacthire') {
+    const iframe = document.querySelector('#view-impacthire iframe');
     if (iframe) iframe.src = '';
   }
 

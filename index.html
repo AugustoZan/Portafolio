@@ -27,15 +27,23 @@
 
       <div class="projects-grid">
         <div class="project">
+          <div onclick="openModal('nocountry')">
+            <img
+              src="https://www.nocountry.tech/favicon.png"
+              alt="No Country"
+            />
+          </div>
+          <h3>No Country (Sitio Web Oficial)</h3>
+        </div>
+        <div class="project">
           <div onclick="openModal('impacthire')">
             <img
               src="https://raw.githubusercontent.com/No-Country-simulation/S06-26-NC-Equipo-75-Web-App-Development/3c1e1e3c19e1ea4ad2b21acd47510d804767b616/frontend/src/assets/images/logo.svg"
-              alt="Resolva"
+              alt="ImpactHire"
             />
           </div>
           <h3>ImpactHire</h3>
         </div>
-
         <div class="project">
           <div onclick="openModal('resolva')">
             <img
@@ -107,6 +115,101 @@
         </a>
       </div>
     </footer>
+
+    <!-- Modal: No Country (Sitio Web Oficial) -->
+    <div id="modal-nocountry" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('nocountry')">&times;</span>
+        <h2>No Country — Sitio web oficial</h2>
+        <p class="modal-description">
+          Desarrollo de componentes para el sitio oficial de No Country
+          , plataforma que conecta talentos IT con empresas de toda América
+          Latina. Como parte del Fellowship de No Country, desarrollé 25+
+          componentes React en producción: <strong>HeroSection</strong>, navbar,
+          carruseles con animación marquee, secciones interactivas con barras de
+          progreso, acordeón de FAQs, tablas comparativas y componentes
+          transversales reutilizables como sistema de animaciones de entrada.
+          También implementé optimizaciones <strong>SEO/GEO</strong> para
+          mejorar la indexación del sitio.
+        </p>
+
+        <div class="thumb-strip">
+          <img
+            src="URL_DE_TU_SCREENSHOT_1"
+            onclick="updateView('view-nocountry', this.src)"
+          />
+          <img
+            src="URL_DE_TU_SCREENSHOT_2"
+            onclick="updateView('view-nocountry', this.src)"
+          />
+          <img
+            src="URL_DE_TU_SCREENSHOT_3"
+            onclick="updateView('view-nocountry', this.src)"
+          />
+        </div>
+
+        <div class="tech-slider">
+          <div class="tech-track">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
+              alt="React"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/nextjs/nextjs-original.svg"
+              alt="Next.js"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind CSS"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/git/git-original.svg"
+              alt="Git"
+            />
+            <!-- Duplicado para el loop del marquee -->
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
+              alt="React"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
+              alt="TypeScript"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/nextjs/nextjs-original.svg"
+              alt="Next.js"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind CSS"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/git/git-original.svg"
+              alt="Git"
+            />
+          </div>
+        </div>
+
+        <div class="modal-buttons">
+          <a
+            href="https://www.nocountry.tech/"
+            target="_blank"
+            class="modal-button openapp-button"
+            >Ver sitio</a
+          >
+          <button
+            class="modal-button cancel-button"
+            onclick="closeModal('nocountry')"
+          >
+            Cerrar
+          </button>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal: TurnApp -->
     <div id="modal-turnapp" class="modal">
@@ -531,7 +634,7 @@
           >
           <button
             class="modal-button cancel-button"
-            onclick="closeModal('impacthire')"
+            onclick="closeModal('resolva')"
           >
             Cerrar
           </button>
@@ -544,10 +647,13 @@
         <span class="close" onclick="closeModal('impacthire')">&times;</span>
         <h2>ImpactHire</h2>
         <p class="modal-description">
-      ImpactHire - Convirtiendo los objetivos de diversidad en un impacto real en la contratación.
-      ImpactHire es una plataforma de contratación inclusiva que conecta a las empresas con talento perteneciente a grupos subrepresentados mediante un sistema de emparejamiento inteligente, análisis de diversidad y resultados ESG medibles.
-      Diseñada para organizaciones que buscan transformar sus compromisos con la inclusión en oportunidades reales.
-
+          ImpactHire - Convirtiendo los objetivos de diversidad en un impacto
+          real en la contratación. ImpactHire es una plataforma de contratación
+          inclusiva que conecta a las empresas con talento perteneciente a
+          grupos subrepresentados mediante un sistema de emparejamiento
+          inteligente, análisis de diversidad y resultados ESG medibles.
+          Diseñada para organizaciones que buscan transformar sus compromisos
+          con la inclusión en oportunidades reales.
         </p>
 
         <div class="main-viewer" style="min-height: 400px">
@@ -591,94 +697,95 @@
             <p><span class="label">Contraseña:</span> 123456</p>
           </div>
 
-        <div class="tech-slider">
-          <div class="tech-track">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
-              alt="React"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vite/vite-original.svg"
-              alt="Vite"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/reactrouter/reactrouter-original.svg"
-              alt="React Router"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
-              alt="TypeScript"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/html5/html5-original.svg"
-              alt="HTML5"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/css3/css3-original.svg"
-              alt="CSS3"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg"
-              alt="Render"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg"
-              alt="JWT"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
-              alt="React"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vite/vite-original.svg"
-              alt="Vite"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/reactrouter/reactrouter-original.svg"
-              alt="React Router"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
-              alt="TypeScript"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/html5/html5-original.svg"
-              alt="HTML5"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/css3/css3-original.svg"
-              alt="CSS3"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg"
-              alt="Render"
-            />
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg"
-              alt="JWT"
-            />
+          <div class="tech-slider">
+            <div class="tech-track">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
+                alt="React"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vite/vite-original.svg"
+                alt="Vite"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/reactrouter/reactrouter-original.svg"
+                alt="React Router"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/html5/html5-original.svg"
+                alt="HTML5"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/css3/css3-original.svg"
+                alt="CSS3"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg"
+                alt="Render"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg"
+                alt="JWT"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/react/react-original.svg"
+                alt="React"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/vite/vite-original.svg"
+                alt="Vite"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/reactrouter/reactrouter-original.svg"
+                alt="React Router"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/typescript/typescript-original.svg"
+                alt="TypeScript"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/html5/html5-original.svg"
+                alt="HTML5"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.17.0/icons/css3/css3-original.svg"
+                alt="CSS3"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/render.svg"
+                alt="Render"
+              />
+              <img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/jsonwebtokens.svg"
+                alt="JWT"
+              />
+            </div>
           </div>
-        </div>
 
-        <div class="modal-buttons">
-          <a
-            href="https://impacthire.vercel.app/login"
-            target="_blank"
-            class="modal-button openapp-button"
-            >Abrir App</a
-          >
-          <a
-            href="https://github.com/No-Country-simulation/S06-26-NC-Equipo-75-Web-App-Development/tree/develop"
-            target="_blank"
-            class="modal-button repo-button"
-            >Repositorio</a
-          >
-          <button
-            class="modal-button cancel-button"
-            onclick="closeModal('impacthire')"
-          >
-            Cerrar
-          </button>
+          <div class="modal-buttons">
+            <a
+              href="https://impacthire.vercel.app/login"
+              target="_blank"
+              class="modal-button openapp-button"
+              >Abrir App</a
+            >
+            <a
+              href="https://github.com/No-Country-simulation/S06-26-NC-Equipo-75-Web-App-Development/tree/develop"
+              target="_blank"
+              class="modal-button repo-button"
+              >Repositorio</a
+            >
+            <button
+              class="modal-button cancel-button"
+              onclick="closeModal('impacthire')"
+            >
+              Cerrar
+            </button>
+          </div>
         </div>
       </div>
     </div>

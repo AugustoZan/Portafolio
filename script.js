@@ -16,10 +16,10 @@ function updateView(targetId, newSrc) {
 function resetToImage(modalId) {
   const modal = document.getElementById('modal-' + modalId);
   if (!modal) return;
-  if (modalId === 'turnapp') {
+  if (modalId === 'turnapp' || modalId === 'nocountry') {
     const firstThumb = modal.querySelector('.thumb-strip img');
     if (firstThumb) {
-      updateView('view-turnapp', firstThumb.src);
+      updateView('view-' + modalId, firstThumb.src);
     }
   }
 }
@@ -84,7 +84,7 @@ function showImpactHireVideo() {
     iframe.style.display = 'block';
     requestAnimationFrame(() => {
       iframe.src =
-  'https://www.youtube.com/embed/WgzpMIdTX38?autoplay=1&rel=0&mute=1';
+        'https://www.youtube.com/embed/WgzpMIdTX38?autoplay=1&rel=0&mute=1';
     });
   }
 }
@@ -108,8 +108,12 @@ function openModal(id) {
     const uniqueCount = imgs.length / 2;
     const sliderWidth = slider.offsetWidth;
     const iconSize = 40;
-    const margin = Math.floor((sliderWidth - iconSize * uniqueCount) / (uniqueCount * 2));
-    imgs.forEach(img => { img.style.margin = `0 ${margin}px`; });
+    const margin = Math.floor(
+      (sliderWidth - iconSize * uniqueCount) / (uniqueCount * 2)
+    );
+    imgs.forEach(img => {
+      img.style.margin = `0 ${margin}px`;
+    });
   }
 
   // Mostrar contenido según el modal
@@ -121,7 +125,7 @@ function openModal(id) {
     setTimeout(showResolvaVideo, 100);
   } else if (id === 'impacthire') {
     setTimeout(showImpactHireVideo, 100);
-  } else if (id === 'turnapp') {
+  } else if (id === 'turnapp' || id === 'nocountry') {
     resetToImage(id);
   }
 }
@@ -160,4 +164,4 @@ window.onclick = function (event) {
       closeModal(id);
     }
   });
-}
+};

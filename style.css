@@ -305,6 +305,9 @@ footer {
 .project img {
   width: 200px;
   height: 200px;
+  object-fit: contain;
+  /* background-color: #1a1a1a; */
+  border-radius: 8px;
 }
 
 /* --- ESTILOS DEL CARRUSEL --- */
@@ -426,4 +429,9 @@ footer {
 .thumb-strip img:hover {
   border-color: #0078d4;
   transform: scale(1.05);
+}
+
+/* Next.js es negro por defecto → lo invertimos para que se vea sobre fondo oscuro */
+.tech-track img[alt="Next.js"] {
+  filter: invert(1);
 }
